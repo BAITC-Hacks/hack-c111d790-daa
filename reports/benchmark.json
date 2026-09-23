@@ -1,0 +1,655 @@
+{
+  "dataset": "Электрокомплект · демонстрационный набор",
+  "synthetic": true,
+  "seed": 42,
+  "as_of": "2026-09-23",
+  "model_version": "demand-1.0.0",
+  "elapsed_seconds": 0.341,
+  "summary": {
+    "value_wape": 39.0,
+    "baseline_value_wape": 47.2,
+    "positions": 24,
+    "to_order": 20,
+    "critical": 14,
+    "total_amount": 21065600.0,
+    "anomaly_events": 6,
+    "excluded_by_unit": {
+      "м": 8820.0,
+      "шт": 5670.0
+    },
+    "lost_by_unit": {
+      "м": 2156.0,
+      "шт": 2233.1
+    },
+    "mean_wape": 64.4,
+    "baseline_mean_wape": 72.6
+  },
+  "method": "Two 28-day tuning folds, separate last-28-day holdout; available days only; value-weighted and macro WAPE.",
+  "limitations": "Synthetic data. No measured business savings. Intervals and safety stock are approximate.",
+  "positions": [
+    {
+      "sku": "LED-001",
+      "warehouse": "Алматы",
+      "model": "weekday",
+      "evaluation": {
+        "wape": 24.92,
+        "mae": 4.316,
+        "bias": 19.95,
+        "samples": 25,
+        "actual_sum": 433.0,
+        "absolute_error_sum": 107.90476190476191
+      },
+      "baseline": {
+        "wape": 34.86,
+        "mae": 6.039,
+        "bias": 4.13,
+        "samples": 25,
+        "actual_sum": 433.0,
+        "absolute_error_sum": 150.96428571428572
+      },
+      "quantity": 912,
+      "excluded_units": 1260.0,
+      "lost_units": 420.5,
+      "stockout_days": 22,
+      "confidence": "evaluated"
+    },
+    {
+      "sku": "LED-001",
+      "warehouse": "Астана",
+      "model": "weekday",
+      "evaluation": {
+        "wape": 45.61,
+        "mae": 4.324,
+        "bias": 32.59,
+        "samples": 25,
+        "actual_sum": 237.0,
+        "absolute_error_sum": 108.09523809523812
+      },
+      "baseline": {
+        "wape": 37.82,
+        "mae": 3.585,
+        "bias": 15.47,
+        "samples": 25,
+        "actual_sum": 237.0,
+        "absolute_error_sum": 89.625
+      },
+      "quantity": 568,
+      "excluded_units": 1260.0,
+      "lost_units": 250.1,
+      "stockout_days": 22,
+      "confidence": "evaluated"
+    },
+    {
+      "sku": "AUT-003",
+      "warehouse": "Алматы",
+      "model": "huber",
+      "evaluation": {
+        "wape": 29.7,
+        "mae": 2.8,
+        "bias": -2.54,
+        "samples": 28,
+        "actual_sum": 264.0,
+        "absolute_error_sum": 78.41268563557577
+      },
+      "baseline": {
+        "wape": 37.23,
+        "mae": 3.51,
+        "bias": 13.64,
+        "samples": 28,
+        "actual_sum": 264.0,
+        "absolute_error_sum": 98.28571428571428
+      },
+      "quantity": 162,
+      "excluded_units": 0,
+      "lost_units": 0.0,
+      "stockout_days": 0,
+      "confidence": "evaluated"
+    },
+    {
+      "sku": "AUT-003",
+      "warehouse": "Астана",
+      "model": "huber",
+      "evaluation": {
+        "wape": 29.41,
+        "mae": 1.764,
+        "bias": -0.0,
+        "samples": 28,
+        "actual_sum": 168.0,
+        "absolute_error_sum": 49.403330804976925
+      },
+      "baseline": {
+        "wape": 33.23,
+        "mae": 1.994,
+        "bias": 5.06,
+        "samples": 28,
+        "actual_sum": 168.0,
+        "absolute_error_sum": 55.82142857142857
+      },
+      "quantity": 114,
+      "excluded_units": 0,
+      "lost_units": 0.0,
+      "stockout_days": 0,
+      "confidence": "evaluated"
+    },
+    {
+      "sku": "INS-003",
+      "warehouse": "Алматы",
+      "model": "mean",
+      "evaluation": {
+        "wape": 108.0,
+        "mae": 1.119,
+        "bias": -77.59,
+        "samples": 28,
+        "actual_sum": 29.0,
+        "absolute_error_sum": 31.32142857142857
+      },
+      "baseline": {
+        "wape": 108.0,
+        "mae": 1.119,
+        "bias": -77.59,
+        "samples": 28,
+        "actual_sum": 29.0,
+        "absolute_error_sum": 31.32142857142857
+      },
+      "quantity": 25,
+      "excluded_units": 0,
+      "lost_units": 0.0,
+      "stockout_days": 0,
+      "confidence": "evaluated"
+    },
+    {
+      "sku": "AUT-001",
+      "warehouse": "Алматы",
+      "model": "huber",
+      "evaluation": {
+        "wape": 19.24,
+        "mae": 3.578,
+        "bias": 1.31,
+        "samples": 25,
+        "actual_sum": 465.0,
+        "absolute_error_sum": 89.44449855769483
+      },
+      "baseline": {
+        "wape": 34.78,
+        "mae": 6.469,
+        "bias": -3.99,
+        "samples": 25,
+        "actual_sum": 465.0,
+        "absolute_error_sum": 161.71428571428572
+      },
+      "quantity": 552,
+      "excluded_units": 1575.0,
+      "lost_units": 453.5,
+      "stockout_days": 22,
+      "confidence": "evaluated"
+    },
+    {
+      "sku": "CBL-001",
+      "warehouse": "Алматы",
+      "model": "weekday",
+      "evaluation": {
+        "wape": 22.23,
+        "mae": 12.038,
+        "bias": 21.47,
+        "samples": 25,
+        "actual_sum": 1354.0,
+        "absolute_error_sum": 300.95238095238096
+      },
+      "baseline": {
+        "wape": 25.01,
+        "mae": 13.545,
+        "bias": 5.47,
+        "samples": 25,
+        "actual_sum": 1354.0,
+        "absolute_error_sum": 338.625
+      },
+      "quantity": 2100,
+      "excluded_units": 4410.0,
+      "lost_units": 1341.9,
+      "stockout_days": 22,
+      "confidence": "evaluated"
+    },
+    {
+      "sku": "INS-001",
+      "warehouse": "Алматы",
+      "model": "huber",
+      "evaluation": {
+        "wape": 18.92,
+        "mae": 3.959,
+        "bias": 0.25,
+        "samples": 25,
+        "actual_sum": 523.0,
+        "absolute_error_sum": 98.96782644829595
+      },
+      "baseline": {
+        "wape": 29.9,
+        "mae": 6.254,
+        "bias": 2.09,
+        "samples": 25,
+        "actual_sum": 523.0,
+        "absolute_error_sum": 156.35714285714286
+      },
+      "quantity": 450,
+      "excluded_units": 0,
+      "lost_units": 535.3,
+      "stockout_days": 22,
+      "confidence": "evaluated"
+    },
+    {
+      "sku": "AUT-001",
+      "warehouse": "Астана",
+      "model": "huber",
+      "evaluation": {
+        "wape": 20.71,
+        "mae": 2.428,
+        "bias": -1.77,
+        "samples": 25,
+        "actual_sum": 293.0,
+        "absolute_error_sum": 60.69223329111262
+      },
+      "baseline": {
+        "wape": 32.64,
+        "mae": 3.825,
+        "bias": -5.69,
+        "samples": 25,
+        "actual_sum": 293.0,
+        "absolute_error_sum": 95.625
+      },
+      "quantity": 348,
+      "excluded_units": 1575.0,
+      "lost_units": 278.0,
+      "stockout_days": 22,
+      "confidence": "evaluated"
+    },
+    {
+      "sku": "CBL-001",
+      "warehouse": "Астана",
+      "model": "weekday",
+      "evaluation": {
+        "wape": 24.23,
+        "mae": 8.082,
+        "bias": 19.74,
+        "samples": 25,
+        "actual_sum": 834.0,
+        "absolute_error_sum": 202.04761904761907
+      },
+      "baseline": {
+        "wape": 26.49,
+        "mae": 8.837,
+        "bias": 4.7,
+        "samples": 25,
+        "actual_sum": 834.0,
+        "absolute_error_sum": 220.92857142857144
+      },
+      "quantity": 1300,
+      "excluded_units": 4410.0,
+      "lost_units": 814.1,
+      "stockout_days": 22,
+      "confidence": "evaluated"
+    },
+    {
+      "sku": "INS-001",
+      "warehouse": "Астана",
+      "model": "weekday",
+      "evaluation": {
+        "wape": 22.62,
+        "mae": 2.823,
+        "bias": 9.89,
+        "samples": 25,
+        "actual_sum": 312.0,
+        "absolute_error_sum": 70.57142857142858
+      },
+      "baseline": {
+        "wape": 37.07,
+        "mae": 4.626,
+        "bias": -3.27,
+        "samples": 25,
+        "actual_sum": 312.0,
+        "absolute_error_sum": 115.64285714285715
+      },
+      "quantity": 330,
+      "excluded_units": 0,
+      "lost_units": 295.7,
+      "stockout_days": 22,
+      "confidence": "evaluated"
+    },
+    {
+      "sku": "INS-003",
+      "warehouse": "Астана",
+      "model": "mean",
+      "evaluation": {
+        "wape": 819.64,
+        "mae": 0.585,
+        "bias": 675.0,
+        "samples": 28,
+        "actual_sum": 2.0,
+        "absolute_error_sum": 16.392857142857146
+      },
+      "baseline": {
+        "wape": 819.64,
+        "mae": 0.585,
+        "bias": 675.0,
+        "samples": 28,
+        "actual_sum": 2.0,
+        "absolute_error_sum": 16.392857142857146
+      },
+      "quantity": 11,
+      "excluded_units": 0,
+      "lost_units": 0.0,
+      "stockout_days": 0,
+      "confidence": "evaluated"
+    },
+    {
+      "sku": "LED-003",
+      "warehouse": "Алматы",
+      "model": "huber",
+      "evaluation": {
+        "wape": 17.46,
+        "mae": 4.409,
+        "bias": 6.72,
+        "samples": 28,
+        "actual_sum": 707.0,
+        "absolute_error_sum": 123.4639754842113
+      },
+      "baseline": {
+        "wape": 30.43,
+        "mae": 7.684,
+        "bias": 19.52,
+        "samples": 28,
+        "actual_sum": 707.0,
+        "absolute_error_sum": 215.1428571428571
+      },
+      "quantity": 580,
+      "excluded_units": 0,
+      "lost_units": 0.0,
+      "stockout_days": 0,
+      "confidence": "evaluated"
+    },
+    {
+      "sku": "LED-003",
+      "warehouse": "Астана",
+      "model": "weekday",
+      "evaluation": {
+        "wape": 22.08,
+        "mae": 3.786,
+        "bias": 13.65,
+        "samples": 28,
+        "actual_sum": 480.0,
+        "absolute_error_sum": 106.0
+      },
+      "baseline": {
+        "wape": 33.32,
+        "mae": 5.712,
+        "bias": 13.65,
+        "samples": 28,
+        "actual_sum": 480.0,
+        "absolute_error_sum": 159.92857142857144
+      },
+      "quantity": 580,
+      "excluded_units": 0,
+      "lost_units": 0.0,
+      "stockout_days": 0,
+      "confidence": "evaluated"
+    },
+    {
+      "sku": "LED-002",
+      "warehouse": "Алматы",
+      "model": "weekday",
+      "evaluation": {
+        "wape": 46.53,
+        "mae": 2.277,
+        "bias": 29.56,
+        "samples": 28,
+        "actual_sum": 137.0,
+        "absolute_error_sum": 63.75
+      },
+      "baseline": {
+        "wape": 55.29,
+        "mae": 2.705,
+        "bias": 29.56,
+        "samples": 28,
+        "actual_sum": 137.0,
+        "absolute_error_sum": 75.74999999999997
+      },
+      "quantity": 152,
+      "excluded_units": 0,
+      "lost_units": 0.0,
+      "stockout_days": 0,
+      "confidence": "evaluated"
+    },
+    {
+      "sku": "LED-002",
+      "warehouse": "Астана",
+      "model": "weekday",
+      "evaluation": {
+        "wape": 50.0,
+        "mae": 1.5,
+        "bias": 27.38,
+        "samples": 28,
+        "actual_sum": 84.0,
+        "absolute_error_sum": 42.0
+      },
+      "baseline": {
+        "wape": 64.54,
+        "mae": 1.936,
+        "bias": 27.38,
+        "samples": 28,
+        "actual_sum": 84.0,
+        "absolute_error_sum": 54.214285714285715
+      },
+      "quantity": 88,
+      "excluded_units": 0,
+      "lost_units": 0.0,
+      "stockout_days": 0,
+      "confidence": "evaluated"
+    },
+    {
+      "sku": "CBL-002",
+      "warehouse": "Алматы",
+      "model": "weekday",
+      "evaluation": {
+        "wape": 25.66,
+        "mae": 5.545,
+        "bias": 19.83,
+        "samples": 28,
+        "actual_sum": 605.0,
+        "absolute_error_sum": 155.25
+      },
+      "baseline": {
+        "wape": 34.7,
+        "mae": 7.497,
+        "bias": 19.83,
+        "samples": 28,
+        "actual_sum": 605.0,
+        "absolute_error_sum": 209.92857142857142
+      },
+      "quantity": 200,
+      "excluded_units": 0,
+      "lost_units": 0.0,
+      "stockout_days": 0,
+      "confidence": "evaluated"
+    },
+    {
+      "sku": "CBL-002",
+      "warehouse": "Астана",
+      "model": "weekday",
+      "evaluation": {
+        "wape": 23.06,
+        "mae": 3.179,
+        "bias": 14.25,
+        "samples": 28,
+        "actual_sum": 386.0,
+        "absolute_error_sum": 89.0
+      },
+      "baseline": {
+        "wape": 32.38,
+        "mae": 4.464,
+        "bias": 14.25,
+        "samples": 28,
+        "actual_sum": 386.0,
+        "absolute_error_sum": 125.0
+      },
+      "quantity": 150,
+      "excluded_units": 0,
+      "lost_units": 0.0,
+      "stockout_days": 0,
+      "confidence": "evaluated"
+    },
+    {
+      "sku": "CBL-003",
+      "warehouse": "Алматы",
+      "model": "weekday",
+      "evaluation": {
+        "wape": 16.78,
+        "mae": 5.527,
+        "bias": 11.77,
+        "samples": 28,
+        "actual_sum": 922.0,
+        "absolute_error_sum": 154.75
+      },
+      "baseline": {
+        "wape": 24.69,
+        "mae": 8.129,
+        "bias": 11.77,
+        "samples": 28,
+        "actual_sum": 922.0,
+        "absolute_error_sum": 227.60714285714283
+      },
+      "quantity": 300,
+      "excluded_units": 0,
+      "lost_units": 0.0,
+      "stockout_days": 0,
+      "confidence": "evaluated"
+    },
+    {
+      "sku": "CBL-003",
+      "warehouse": "Астана",
+      "model": "huber",
+      "evaluation": {
+        "wape": 16.46,
+        "mae": 3.587,
+        "bias": -5.14,
+        "samples": 28,
+        "actual_sum": 610.0,
+        "absolute_error_sum": 100.43114077132356
+      },
+      "baseline": {
+        "wape": 28.29,
+        "mae": 6.163,
+        "bias": 6.89,
+        "samples": 28,
+        "actual_sum": 610.0,
+        "absolute_error_sum": 172.57142857142856
+      },
+      "quantity": 100,
+      "excluded_units": 0,
+      "lost_units": 0.0,
+      "stockout_days": 0,
+      "confidence": "evaluated"
+    },
+    {
+      "sku": "AUT-002",
+      "warehouse": "Алматы",
+      "model": "huber",
+      "evaluation": {
+        "wape": 38.1,
+        "mae": 2.096,
+        "bias": 2.0,
+        "samples": 28,
+        "actual_sum": 154.0,
+        "absolute_error_sum": 58.67481493676627
+      },
+      "baseline": {
+        "wape": 49.12,
+        "mae": 2.702,
+        "bias": 7.47,
+        "samples": 28,
+        "actual_sum": 154.0,
+        "absolute_error_sum": 75.64285714285715
+      },
+      "quantity": 0,
+      "excluded_units": 0,
+      "lost_units": 0.0,
+      "stockout_days": 0,
+      "confidence": "evaluated"
+    },
+    {
+      "sku": "AUT-002",
+      "warehouse": "Астана",
+      "model": "huber",
+      "evaluation": {
+        "wape": 44.0,
+        "mae": 1.367,
+        "bias": 3.15,
+        "samples": 28,
+        "actual_sum": 87.0,
+        "absolute_error_sum": 38.284085822495236
+      },
+      "baseline": {
+        "wape": 52.22,
+        "mae": 1.622,
+        "bias": 17.24,
+        "samples": 28,
+        "actual_sum": 87.0,
+        "absolute_error_sum": 45.42857142857142
+      },
+      "quantity": 0,
+      "excluded_units": 0,
+      "lost_units": 0.0,
+      "stockout_days": 0,
+      "confidence": "evaluated"
+    },
+    {
+      "sku": "INS-002",
+      "warehouse": "Алматы",
+      "model": "huber",
+      "evaluation": {
+        "wape": 24.78,
+        "mae": 3.283,
+        "bias": 4.03,
+        "samples": 28,
+        "actual_sum": 371.0,
+        "absolute_error_sum": 91.9341789669055
+      },
+      "baseline": {
+        "wape": 38.9,
+        "mae": 5.154,
+        "bias": 26.28,
+        "samples": 28,
+        "actual_sum": 371.0,
+        "absolute_error_sum": 144.32142857142858
+      },
+      "quantity": 0,
+      "excluded_units": 0,
+      "lost_units": 0.0,
+      "stockout_days": 0,
+      "confidence": "evaluated"
+    },
+    {
+      "sku": "INS-002",
+      "warehouse": "Астана",
+      "model": "huber",
+      "evaluation": {
+        "wape": 35.29,
+        "mae": 3.025,
+        "bias": -6.69,
+        "samples": 28,
+        "actual_sum": 240.0,
+        "absolute_error_sum": 84.69388973755358
+      },
+      "baseline": {
+        "wape": 41.61,
+        "mae": 3.566,
+        "bias": 16.46,
+        "samples": 28,
+        "actual_sum": 240.0,
+        "absolute_error_sum": 99.85714285714288
+      },
+      "quantity": 0,
+      "excluded_units": 0,
+      "lost_units": 0.0,
+      "stockout_days": 0,
+      "confidence": "evaluated"
+    }
+  ]
+}
