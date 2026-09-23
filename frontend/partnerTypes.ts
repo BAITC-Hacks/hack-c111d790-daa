@@ -1,0 +1,86 @@
+export type Monthly = {
+  month: string;
+  quantity: number | null;
+  excluded_quantity?: number;
+  stockout_days?: number;
+};
+export type Product = {
+  sku: string;
+  name: string;
+  company: string;
+  unit: string | null;
+  category: string | null;
+  supplier_sku: string | null;
+  version?: string;
+  snapshot_date: string;
+  stock_date: string | null;
+  stock: number | null;
+  stock_scope_confirmed: boolean;
+  purchase_price: number | null;
+  moq: number | null;
+  pack_size: number | null;
+  lead_days: number | null;
+  review_days: number | null;
+  service_level: number | null;
+  growth_pct: number | null;
+  monthly_sales: Monthly[];
+  monthly_stock: Monthly[];
+  inbound: { quantity: number; eta: string; reference: string }[];
+  materials: { quantity: number; due_date: string; reference: string }[];
+  provenance: Record<string, string>;
+  cost_of_sales?: number;
+  source_snapshot: Record<string, unknown>;
+  event_summary?: { n: number; returns: number; gross: number };
+  largest_documents?: { date: string; document: string; quantity: number; warehouse: string }[];
+  revisions?: { id: number; created_at: string; note: string }[];
+};
+export type Company = {
+  id: string;
+  name: string;
+  snapshot_date: string;
+  products: number;
+  monthly_sales_products: number;
+  stock_snapshot_products: number;
+  monthly_stock_products: number;
+  moq_products: number;
+  pack_products: number;
+  inbound_lines: number;
+  events: { rows: number; returns: number; positive: number };
+  reconciliation: { compared: number; mismatched: number };
+  limitations: string[];
+  sources: { file: string; sha256: string; sheets: { name: string; populated_rows: number }[] }[];
+};
+export type Forecast = {
+  sku: string;
+  name: string;
+  unit: string | null;
+  quantity: number | null;
+  amount: number | null;
+  model: string | null;
+  blocked: string[];
+  warnings: string[];
+  explanation?: string;
+  source_basis: string;
+  forecast: { month: string; quantity: number }[];
+  history: { month: string; actual: number; regular: number; known: boolean }[];
+  metrics: { wape: number | null; mae: number | null; samples: number } | null;
+  baseline: { wape: number | null } | null;
+  holdout: { start: string; end: string } | null;
+  formula: Record<string, number> | null;
+  urgency?: string;
+  days_to_shortage?: number | null;
+};
+export type PartnerRun = {
+  id: string;
+  company: string;
+  created_at: string;
+  rows: Forecast[];
+  summary: {
+    positions: number;
+    orders_ready: number;
+    needs_inputs: number;
+    by_unit: Record<string, { positions: number; wape: number | null; baseline_wape: number | null }>;
+  };
+};
+export const formatNumber = (v: number | null | undefined, digits = 1) =>
+  v == null ? '—' : new Intl.NumberFormat('ru-RU', { maximumFractionDigits: digits }).format(v);

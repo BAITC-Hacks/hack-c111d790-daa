@@ -1,0 +1,5 @@
+Asset: frontend/assets/waresync.png
+Tool: built-in image_gen (edit of user-provided logo)
+
+Prompt:
+Edit the attached logo for use as a small web app brand icon. Preserve EXACTLY the original angular symmetrical silhouette, proportions, sharp straight edges and central hourglass-shaped cutout. Change only the solid black fill to solid violet #8065ff and remove the off-white background to genuine transparency, including the central cutout. No shadows, gradients, extra elements, text or shape redesign. Center the mark with minimal equal padding in a square canvas. This asset will appear beside the name WareSync in an existing app.
